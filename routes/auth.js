@@ -15,6 +15,10 @@ router.get('/protected',requireLogin,(req,res)=>{
     res.send("hello");
 })
 
+router.get('/imexample',(req,res)=>{
+    res.send("hello im example im reachble");
+})
+
 router.post('/signup',(req,res)=>{
     const {name,email,password} = req.body;
     if(!email || !password || !name ){
