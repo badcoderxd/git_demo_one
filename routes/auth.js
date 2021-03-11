@@ -81,7 +81,7 @@ router.post('/signin',(req,res)=>{
     })
 })
 
-router.get('/getusers',(req,res)=>{
+router.get('/getusers',requireLogin,(req,res)=>{
     User.find()
     .then(users =>{
         res.json({users})
