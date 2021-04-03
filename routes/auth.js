@@ -16,7 +16,7 @@ router.get('/protected',requireLogin,(req,res)=>{
 })
 
 router.get('/imexample',(req,res)=>{
-    res.send("im example");
+    res.json({data:"hello world"});
 })
 
 router.post('/signup',(req,res)=>{
