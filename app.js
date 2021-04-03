@@ -6,7 +6,7 @@ const {MONGOURI} = require("./keys");
 const cors = require("cors");
 
 var corsOptions = {
-    origin: "https://606819a16a5bb4ea718099e0--admiring-cray-aec7d9.netlify.app"
+    origin: "https://nodejspract.herokuapp.com"
   };
 
 app.use(cors(corsOptions));
