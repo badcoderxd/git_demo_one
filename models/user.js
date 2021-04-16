@@ -12,7 +12,19 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    status: {
+        type: String, 
+        enum: ['Pending', 'Active'],
+        default: 'Pending'
+      },
+    confirmationCode: { 
+        type: String, 
+        unique: true },
+    date: {
+        type: Date,
+        default: Date.now
+   }
 })
 
 mongoose.model("User",userSchema)

@@ -1,0 +1,1 @@
+export const BASE_LOCAL_URL = 'http://localhost:5000'
