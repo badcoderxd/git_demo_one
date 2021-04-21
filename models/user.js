@@ -13,9 +13,6 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     }
-   email:{
-    type:string,
-    required:true
 })
 
 mongoose.model("User",userSchema)
