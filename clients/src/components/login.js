@@ -15,6 +15,9 @@ import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import { loginUser } from '../redux/auth/authAction';
 import { withStyles } from "@material-ui/core/styles";
+import { getAuthToken, getUserData } from '../helpers/Authgetuser';
+import axios from 'axios';
+import { fetchJSON } from '../helpers/api';
 
 function Copyright() {
   return (
@@ -50,11 +53,19 @@ const styles = theme => ({
 });
 
 class Login extends Component {
+
+  componentWillMount(){
+         const response = fetchJSON('/getallstory')
+        response.then(resp=>{
+          console.log(resp)
+        })
+  }
     render(){
   const classes = this.props;
 
   const loginsbt=()=>{
       this.props.loginUser("www.akshayaradhya@gmail.com","123456789sp");
+      this.props.history.push('/Home');
       console.log("hit")
   }
 
